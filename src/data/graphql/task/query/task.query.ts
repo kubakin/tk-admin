@@ -8,6 +8,9 @@ export const TASK_LIST = gql`
       cost
       penalty
       type
+      answer
+      defaultOrder
+      description
     }
   }
 `;
@@ -17,8 +20,11 @@ export interface TaskListResponse {
     id: string;
     name: string;
     cost: number;
-    type: string
+    type: string;
+    defaultOrder: number;
     penalty: number;
+    answer: any;
+    description: string;
   }[];
 }
 

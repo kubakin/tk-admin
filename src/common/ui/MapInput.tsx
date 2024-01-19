@@ -15,10 +15,9 @@ interface MapInputInterface {
   onChange?: (val: MapInputValue) => void;
 }
 const MapInput = (props: MapInputInterface) => {
-  console.log(props);
   const ref: any = React.createRef();
   const center = [61.787394, 34.347505];
-  const [radius, setRadius] = useState(100000);
+  const [radius, setRadius] = useState(props?.value?.radius || 100000);
   const [latitude, setLatitude] = useState<number>(
     props?.value?.latitude || center[0],
   );
@@ -68,6 +67,7 @@ const MapInput = (props: MapInputInterface) => {
         onChange={(e) => {
           setRadius(e);
         }}
+        defaultValue={props?.value?.radius || 10000}
         value={radius}
         max={10000}
         min={0}

@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const GAME_INSTANCE_LIST = gql`
   query GameIntanceList($dto: AdminGameInstanceQuery!) {
@@ -17,6 +17,12 @@ export const GAME_INSTANCE_LIST = gql`
       }
       taskInstances {
         id
+        order
+        status
+        task {
+          id
+          name
+        }
       }
     }
   }
@@ -38,6 +44,12 @@ export interface GameInstanceListResponse {
     };
     taskInstances: {
       id: string;
+      order: number;
+      status: string;
+      task: {
+        id: string;
+        name: string;
+      };
       attempts: any[];
     }[];
   }[];

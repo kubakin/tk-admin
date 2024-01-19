@@ -8,8 +8,9 @@ export interface CreateUpdateQRTaskInterface {
 
 export const CreateUpdateQRTaskForm = (props: CreateUpdateQRTaskInterface) => {
   const [form] = Form.useForm();
+  form.setFieldsValue(props.data);
   return (
-    <Form onFinish={props.onOk}>
+    <Form form={form} onFinish={props.onOk}>
       <Form.Item label="Тип" name="type">
         <Input disabled={true} />
       </Form.Item>

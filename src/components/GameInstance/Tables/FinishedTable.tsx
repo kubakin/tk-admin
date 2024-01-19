@@ -5,8 +5,9 @@ import {
   TaskInstanceTable,
 } from './TaskInstanceTable';
 import PendingDropdown from '../Actions/PendingDropdown';
+import FinishedDropdown from '../Actions/FinishedDropdown';
 
-export interface PendingGameInstanceItemInterface {
+export interface FinishedGameInstanceItemInterface {
   id: string;
   score: number;
   team: {
@@ -15,14 +16,19 @@ export interface PendingGameInstanceItemInterface {
   };
 }
 
-interface PendingGameInstanceTableInterface {
-  data: PendingGameInstanceItemInterface[];
+interface FinishedGameInstanceTableInterface {
+  data: FinishedGameInstanceItemInterface[];
   loading: boolean;
 }
 
-export const PendingTable: FC<PendingGameInstanceTableInterface> = (props) => {
+export const FinishedTable: FC<FinishedGameInstanceTableInterface> = (
+  props,
+) => {
   return (
     <Table
+      title={() => {
+        return 'Finished';
+      }}
       rowKey={'id'}
       dataSource={props.data}
       columns={[
@@ -32,17 +38,17 @@ export const PendingTable: FC<PendingGameInstanceTableInterface> = (props) => {
           render: (val) => val?.name,
         },
         {
+          title: 'Score',
+          dataIndex: 'score',
+        },
+        {
           title: 'Status',
           dataIndex: 'status',
         },
         {
-          title: 'Created',
-          dataIndex: 'createdAt',
-        },
-        {
           title: 'Actions',
           dataIndex: 'id',
-          render: (it) => <PendingDropdown id={it} />,
+          render: (it) => <FinishedDropdown id={it} />,
         },
       ]}
     />
