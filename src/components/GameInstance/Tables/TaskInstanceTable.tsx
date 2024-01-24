@@ -46,10 +46,6 @@ export const TaskInstanceTable: FC<TaskInstanceTableInterface> = (props) => {
           render: (it) => status[it] || it,
         },
         {
-          title: 'Order',
-          dataIndex: 'order',
-        },
-        {
           title: 'Actions',
           render: (it) => <TaskInstanceDropdown id={it} />,
           dataIndex: 'id',

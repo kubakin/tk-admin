@@ -52,10 +52,10 @@ const MenuComponent: React.FC = () => {
             key: '/admin/pending',
             label: 'Pending',
           },
-          {
-            key: '/admin/game',
-            label: 'Game',
-          },
+          // {
+          //   key: '/admin/game',
+          //   label: 'Game',
+          // },
         ]}
       />
       {game && (

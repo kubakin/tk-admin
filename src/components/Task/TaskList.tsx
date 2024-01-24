@@ -35,11 +35,13 @@ const TaskCreateDropdown = (props: { onChange: (val: string) => void }) => {
     {
       label: 'QR задание',
       key: 'qr',
+      disabled: true,
       onClick: () => onChange('qr'),
     },
     {
       label: 'GEO задание',
       key: 'geo',
+      disabled: true,
       onClick: () => onChange('geo'),
     },
   ];

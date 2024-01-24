@@ -34,7 +34,6 @@ export const WordInput = (props: WorkInputInterface) => {
       onPostRender={() => {
         props.onChange(initVal);
       }}
-      initialValue={initVal}
       init={{
         height: 500,
         menubar: true,
