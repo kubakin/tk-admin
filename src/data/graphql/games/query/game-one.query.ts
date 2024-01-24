@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const GET_GAME = gql`
   query GetGame($id: String!) {
@@ -6,6 +6,16 @@ export const GET_GAME = gql`
       id
       name
       description
+      hidden
+      cost
+      rules
+      personLimit
+      duration
+      taskStrategy
+      autoStart
+      autoEnd
+      plannedAt
+      finalText
     }
   }
 `;
@@ -15,5 +25,15 @@ export interface GameResponse {
     id: string;
     name: string;
     description: string;
+    hidden: boolean;
+    cost: number;
+    rules: string;
+    personLimit: number;
+    duration: number;
+    taskStrategy: string;
+    autoStart: boolean;
+    autoEnd: boolean;
+    plannedAt: Date;
+    finalText: string;
   };
 }

@@ -10,8 +10,6 @@ export const CreateUpdateGameForm = (props: CreateUpdateGameFormInteface) => {
         const [form] = Form.useForm();
         const {createGame: [createGame], updateGame: [updateGame], getGame, gameList} = useGame()
         form.setFieldsValue(props.data)
-        console.log(props.data)
-        
     
         const submit = async (val: any) => {
             if (props.id) {

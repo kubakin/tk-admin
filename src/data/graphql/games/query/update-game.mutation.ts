@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const UPDATE_GAME = gql`
   mutation CreateGame($id: String!, $dto: CreateUpdateGameDto!) {
@@ -9,7 +9,17 @@ export const UPDATE_GAME = gql`
 export interface UpdateGameDto {
   id: string;
   dto: {
-    description: string;
     name: string;
+    description: string;
+    hidden: boolean;
+    cost: number;
+    rules: string;
+    personLimit: number;
+    duration: number;
+    taskStrategy: string;
+    autoStart: boolean;
+    autoEnd: boolean;
+    plannedAt: Date;
+    finalText: string;
   };
 }
