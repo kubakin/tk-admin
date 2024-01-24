@@ -51,7 +51,12 @@ export const CreateUpdateTaskModal = (
   };
 
   return (
-    <Modal onCancel={props.onClose} open={props.data} footer={null}>
+    <Modal
+      width={'70%'}
+      onCancel={props.onClose}
+      open={props.data}
+      footer={null}
+    >
       {forms[props.data.type]}
     </Modal>
   );
