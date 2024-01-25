@@ -10,7 +10,7 @@ import { PendingPage } from './pages/PendingPage';
 
 export const routes = [
   {
-    path: '/admin/task',
+    path: '/task',
     element: (
       <AdminAuthProvider>
         <TaskPage />
@@ -18,7 +18,7 @@ export const routes = [
     ),
   },
   {
-    path: '/admin/user',
+    path: '/user',
     element: (
       <AdminAuthProvider>
         <UserPage />
@@ -26,7 +26,7 @@ export const routes = [
     ),
   },
   {
-    path: '/admin/team',
+    path: '/team',
     element: (
       <AdminAuthProvider>
         <TeamPage />
@@ -34,7 +34,7 @@ export const routes = [
     ),
   },
   {
-    path: '/admin/game-instance',
+    path: '/game-instance',
     element: (
       <AdminAuthProvider>
         <GameInstancePage />
@@ -42,7 +42,7 @@ export const routes = [
     ),
   },
   {
-    path: '/admin/pending',
+    path: '/pending',
     element: (
       <AdminAuthProvider>
         <PendingPage />
@@ -50,7 +50,7 @@ export const routes = [
     ),
   },
   {
-    path: '/admin/game',
+    path: '/game',
     element: (
       <AdminAuthProvider>
         <GamePage />
