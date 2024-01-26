@@ -33,23 +33,23 @@ const MenuComponent: React.FC = () => {
         defaultSelectedKeys={[location.pathname]}
         items={[
           {
-            key: '/user',
+            key: '/admin/user',
             label: 'Users',
           },
           {
-            key: '/team',
+            key: '/admin/team',
             label: 'Teams',
           },
           {
-            key: '/task',
+            key: '/admin/task',
             label: 'Tasks',
           },
           {
-            key: '/game-instance',
+            key: '/admin/game-instance',
             label: 'Progress',
           },
           {
-            key: '/pending',
+            key: '/admin/pending',
             label: 'Pending',
           },
           // {
