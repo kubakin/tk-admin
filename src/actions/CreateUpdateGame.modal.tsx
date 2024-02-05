@@ -38,7 +38,7 @@ export const CreateUpdateGameModal = (props: CreateUpdateGameModalInteface) => {
   };
   form.setFieldsValue({
     ...props.data,
-    plannedAt: daysjs(new Date(props?.data?.plannedAt)),
+    plannedAt: daysjs(new Date(props?.data?.plannedAt || new Date())),
   });
 
   return (

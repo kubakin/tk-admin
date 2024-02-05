@@ -18,7 +18,7 @@ export const routes = [
     ),
   },
   {
-    path: '/user',
+    path: '/admin/user',
     element: (
       <AdminAuthProvider>
         <UserPage />
